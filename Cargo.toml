@@ -1,5 +1,5 @@
 [package]
-name = "yolir"
+name = "yolnir"
 version = "0.0.0"
 authors = ["Matrixmage <osmithsi@sfu.ca>"]
 edition = "2018"
