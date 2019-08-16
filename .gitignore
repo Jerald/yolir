@@ -1,0 +1,9 @@
+/target
+**/*.rs.bk
+
+# for vscode
+*.code-workspace
+/.vscode
+
+# for cargo watch
+/.trigger
