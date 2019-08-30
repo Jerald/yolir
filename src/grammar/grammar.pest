@@ -1,0 +1,12 @@
+WHITESPACE = _{ " " }
+
+number = @{ ASCII_DIGIT+ ~ ("." ~ ASCII_DIGIT+)? }
+
+// This matches all visual ascii characters except a double quote
+string = @{ "\"" ~ (" " | "!" | '#'..'~')* ~ "\"" }
+
+// Equivalent to the regex: `\$[_.a-zA-Z][_.a-zA-Z0-9]*`
+named_ident = @{ "$" ~ ("_" | "." | ASCII_ALPHA) ~ ("_" | "." | ASCII_ALPHANUMERIC)* }
+
+// Equivalent to the regex: `%[0-9]+`
+anon_ident = @{ "%" ~ ASCII_DIGIT+ }
